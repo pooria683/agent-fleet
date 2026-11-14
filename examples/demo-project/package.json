@@ -1,0 +1,9 @@
+{
+  "name": "agent-fleet-local-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "lint": "node lint.mjs"
+  }
+}
