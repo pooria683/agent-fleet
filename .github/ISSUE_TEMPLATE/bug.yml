@@ -1,0 +1,30 @@
+name: Bug report
+description: Report reproducible incorrect behavior
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe actual and expected behavior. Redact prompts, source code, credentials and private logs.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Prefer a generic command adapter or the offline demo over a paid model call.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: agent-fleet, Node.js, Git, OS, and relevant agent CLI version
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Relevant error text or manifest fields. Do not attach secrets or proprietary code.

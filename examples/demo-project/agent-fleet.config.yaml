@@ -1,0 +1,25 @@
+version: 1
+run:
+  parallel: 2
+  timeoutSeconds: 30
+  checkTimeoutSeconds: 30
+agents:
+  demo-good:
+    type: command
+    command: node
+    args: [agent.mjs, --name, '{agent}', --task, '{task}']
+  demo-risky:
+    type: command
+    command: node
+    args: [agent.mjs, --name, '{agent}', --task, '{task}']
+  demo-broken:
+    type: command
+    command: node
+    args: [agent.mjs, --name, '{agent}', --task, '{task}']
+checks:
+  - name: lint
+    command: node
+    args: [lint.mjs]
+  - name: test
+    command: node
+    args: [--test]
